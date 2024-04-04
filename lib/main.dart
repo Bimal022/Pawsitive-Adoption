@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Pet App',
+      title: 'Pet App App',
       theme: ThemeData(
         primaryColor: AppColor.primary,
       ),

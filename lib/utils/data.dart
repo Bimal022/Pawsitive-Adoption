@@ -106,7 +106,7 @@ List pets = [
     "location": "Phnom Penh, Cambodia",
     "is_favorited": false,
     "description": "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
-    "rate": 4.5, 
+    "rate": 4.5,
     "id": "pid001",
     "price": "\$1,250",
     "owner_name": "Sangvaleap",
