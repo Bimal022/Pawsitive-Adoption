@@ -4,6 +4,8 @@ import 'package:pet_adoption_app/utils/data.dart';
 import 'package:pet_adoption_app/widgets/category_item.dart';
 import 'package:pet_adoption_app/widgets/notification_box.dart';
 import 'package:pet_adoption_app/widgets/pet_item.dart';
+import 'details_page.dart';
+import 'package:pet_adoption_app/widgets/custom_searchbar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,6 +16,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _currentPage = 0;
+  TextEditingController _searchController = TextEditingController();
+  List<dynamic> searchedPets = []; // Define searchedPets list
+
+  List<dynamic> searchPetsByName(String query) {
+    return pets.where((pet) => pet['name'].toLowerCase().contains(query.toLowerCase())).toList();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                     color: AppColor.labelColor,
                     size: 20,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 5,
                   ),
                   Text(
@@ -66,11 +74,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
-              const SizedBox(
+              SizedBox(
                 height: 3,
               ),
               Text(
-                "Phnom Penh, Cambodia",
+                "Delhi, India",
+                // Display latitude and longitude
                 style: TextStyle(
                   color: AppColor.textColor,
                   fontWeight: FontWeight.w500,
@@ -95,6 +104,17 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            CustomSearchBar(
+              controller: _searchController,
+              onChanged: (value) {
+                // Implement search here if needed
+              },
+              onSearch: (query) {
+                setState(() {
+                  searchedPets = searchPetsByName(query);
+                });
+              },
+            ),
             const SizedBox(
               height: 25,
             ),
@@ -102,8 +122,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 25,
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(15, 0, 15, 25),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(15, 0, 15, 25),
               child: Text(
                 "Adopt Me",
                 style: TextStyle(
@@ -143,11 +163,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildPets() {
+    List<dynamic> petsToDisplay = searchedPets.isNotEmpty ? searchedPets : pets; // Use searchedPets if available
     double width = MediaQuery.of(context).size.width * .8;
     return Container(
       height: 400,
       child: PageView.builder(
-        itemCount: pets.length,
+        itemCount: petsToDisplay.length,
         controller: PageController(viewportFraction: 0.8),
         onPageChanged: (int index) {
           setState(() {
@@ -156,12 +177,19 @@ class _HomePageState extends State<HomePage> {
         },
         itemBuilder: (BuildContext context, int index) {
           return PetItem(
-            data: pets[index],
+            data: petsToDisplay[index],
             width: width,
-            onTap: null,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DetailsPage(petData: petsToDisplay[index]),
+                ),
+              );
+            },
             onFavoriteTap: () {
               setState(() {
-                pets[index]["is_favorited"] = !pets[index]["is_favorited"];
+                petsToDisplay[index]["is_favorited"] = !petsToDisplay[index]["is_favorited"];
               });
             },
           );

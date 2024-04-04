@@ -1,4 +1,4 @@
-var profile = "https://avatars.githubusercontent.com/u/86506519?v=4";
+var profile = "https://avatars.githubusercontent.com/u/105552528?v=4";
 
 List categories = [
   {
@@ -39,7 +39,7 @@ List pets = [
     "location": "Siem Reap, Cambodia",
     "is_favorited": true,
     "description": "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
-    "rate": 4.5, 
+    "rate": 4.5,
     "id": "pid001",
     "price": "\$1,250",
     "owner_name": "Sangvaleap",
@@ -62,7 +62,7 @@ List pets = [
     "location": "Phnom Penh, Cambodia",
     "is_favorited": false,
     "description": "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
-    "rate": 4.5, 
+    "rate": 4.5,
     "id": "pid001",
     "price": "\$1,250",
     "owner_name": "Sangvaleap",
@@ -84,7 +84,7 @@ List pets = [
     "location": "Battambang, Cambodia",
     "is_favorited": false,
     "description": "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.",
-    "rate": 4.5, 
+    "rate": 4.5,
     "id": "pid001",
     "price": "\$1,250",
     "owner_name": "Sangvaleap",
@@ -257,8 +257,8 @@ var chats = [
     "image": "https://images.unsplash.com/photo-1564460576398-ef55d99548b2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2ZpbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
     "fname" : "John",
     "lname" : "",
-    "name": "DentTerry Jew", 
-    "skill": "Dentist", 
+    "name": "DentTerry Jew",
+    "skill": "Dentist",
     "last_text": "Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document",
     "date": "2 hrs",
     "notify" : 0,
@@ -274,3 +274,15 @@ var chats = [
     "notify" : 0,
   },
 ];
+
+List<Map<String, dynamic>> searchPets(String query) {
+  List<Map<String, dynamic>> searchResult = [];
+  
+  for (var pet in pets) {
+    if (pet['name'].toLowerCase().contains(query.toLowerCase())) {
+      searchResult.add(pet);
+    }
+  }
+  
+  return searchResult;
+}

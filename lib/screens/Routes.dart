@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pet_adoption_app/screens/chat.dart';
-import 'package:pet_adoption_app/screens/home.dart';
+import 'package:pet_adoption_app/screens/home_page.dart';
 import 'package:pet_adoption_app/theme/color.dart';
 import 'package:pet_adoption_app/utils/constant.dart';
 import 'package:pet_adoption_app/widgets/bottombar_item.dart';
+import 'package:pet_adoption_app/screens/fav_page.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({Key? key}) : super(key: key);
@@ -21,13 +22,9 @@ class _RootAppState extends State<RootApp> with TickerProviderStateMixin {
       "page": HomePage(),
     },
     {
-      "icon": "assets/icons/pet-border.svg",
-      "active_icon": "assets/icons/pet.svg",
-      "page": Container(
-        child: Center(
-          child: Text("Pet Page"),
-        ),
-      ),
+      "icon": "assets/icons/heart-border.svg",
+      "active_icon": "assets/icons/heart.svg",
+      "page": FavoritePage(),
     },
     {
       "icon": "assets/icons/chat-border.svg",
