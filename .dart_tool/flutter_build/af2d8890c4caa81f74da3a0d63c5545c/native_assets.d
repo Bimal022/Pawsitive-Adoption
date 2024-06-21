@@ -1,0 +1,1 @@
+ E:\\Fluter\ VS\\pet_adoption_app\\.dart_tool\\flutter_build\\af2d8890c4caa81f74da3a0d63c5545c\\native_assets.yaml: 
