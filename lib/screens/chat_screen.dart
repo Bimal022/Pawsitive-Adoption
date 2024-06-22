@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adoption_app/theme/color.dart'; // Import your color scheme
+import 'package:pawsitive_adoption/theme/color.dart'; // Import your color scheme
 
 class ChatScreen extends StatelessWidget {
   final String personName;

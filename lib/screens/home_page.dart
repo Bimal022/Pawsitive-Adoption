@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adoption_app/theme/color.dart';
-import 'package:pet_adoption_app/utils/data.dart';
-import 'package:pet_adoption_app/widgets/category_item.dart';
-import 'package:pet_adoption_app/widgets/notification_box.dart';
-import 'package:pet_adoption_app/widgets/pet_item.dart';
+import 'package:pawsitive_adoption/theme/color.dart';
+import 'package:pawsitive_adoption/utils/data.dart';
+import 'package:pawsitive_adoption/widgets/category_item.dart';
+import 'package:pawsitive_adoption/widgets/notification_box.dart';
+import 'package:pawsitive_adoption/widgets/pet_item.dart';
 import 'details_page.dart';
-import 'package:pet_adoption_app/widgets/custom_searchbar.dart';
+import 'package:pawsitive_adoption/widgets/custom_searchbar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

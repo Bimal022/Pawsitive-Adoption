@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:pet_adoption_app/theme/color.dart';
+import 'package:pawsitive_adoption/theme/color.dart';
 
 class CustomImage extends StatelessWidget {
   const CustomImage(this.image,

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adoption_app/screens/chat_list_screen.dart';
-import 'package:pet_adoption_app/screens/home_page.dart';
-import 'package:pet_adoption_app/theme/color.dart';
-import 'package:pet_adoption_app/utils/constant.dart';
-import 'package:pet_adoption_app/widgets/bottombar_item.dart';
-import 'package:pet_adoption_app/screens/fav_page.dart';
+import 'package:pawsitive_adoption/screens/chat_list_screen.dart';
+import 'package:pawsitive_adoption/screens/home_page.dart';
+import 'package:pawsitive_adoption/theme/color.dart';
+import 'package:pawsitive_adoption/utils/constant.dart';
+import 'package:pawsitive_adoption/widgets/bottombar_item.dart';
+import 'package:pawsitive_adoption/screens/fav_page.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({Key? key}) : super(key: key);

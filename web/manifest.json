@@ -1,6 +1,6 @@
 {
-    "name": "pet_adoption_app",
-    "short_name": "pet_adoption_app",
+    "name": "pawsitive_adoption",
+    "short_name": "pawsitive_adoption",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

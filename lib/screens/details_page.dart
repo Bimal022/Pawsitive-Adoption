@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adoption_app/theme/color.dart';
-import 'package:pet_adoption_app/widgets/favorite_box.dart';
-import 'package:pet_adoption_app/widgets/custom_image.dart';
-import 'package:pet_adoption_app/utils/data.dart';
+import 'package:pawsitive_adoption/theme/color.dart';
+import 'package:pawsitive_adoption/widgets/favorite_box.dart';
+import 'package:pawsitive_adoption/widgets/custom_image.dart';
+import 'package:pawsitive_adoption/utils/data.dart';
 
 class DetailsPage extends StatefulWidget {
   final dynamic petData;

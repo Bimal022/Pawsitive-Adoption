@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pet_adoption_app/theme/color.dart';
-import 'package:pet_adoption_app/widgets/favorite_box.dart';
+import 'package:pawsitive_adoption/theme/color.dart';
+import 'package:pawsitive_adoption/widgets/favorite_box.dart';
 
 import 'custom_image.dart';
 
