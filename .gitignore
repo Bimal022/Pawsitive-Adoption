@@ -32,7 +32,7 @@ migrate_working_dir/
 .pub/
 /build/
 Node-API/node_modules
-Node-API/server/.env
+Node-API/.env
 # Symbolication related
 app.*.symbols
 
